@@ -1,0 +1,167 @@
+/*
+TODO
+Migrate database clean
+use api
+create account
+test test test !!!!
+create user online
+  
+thursday & friday
+    project doc
+    user guide
+    test test test !!!!	
+
+sunday:
+    submit
+    test test test !!!!
+
+
+*/
+
+
+
+
+
+
+tel:+99900000011001
+
+{ 
+    "deliveryInfoNotification": 
+    { 
+        "deliveryInfo": 
+        { 
+            "address": "tel:+99xxxxxxxxxx", 
+            "deliveryStatus": "DeliveredToTerminal" 
+        }, 
+        "callbackData": "" 
+    } 
+}
+
+
+sms response:
+header:
+
+Array
+(
+    [Server] => Array
+        (
+            [0] => nginx/1.8.0
+        )
+
+    [Date] => Array
+        (
+            [0] => Thu, 15 Oct 2015 15:43:10 GMT
+        )
+
+    [Content-Type] => Array
+        (
+            [0] => application/json
+        )
+
+    [Location] => Array
+        (
+            [0] => https://api.sdp.orange.com/smsmessaging/v1/outbound/200/requests/00JZM1361593836148Z1015153905
+        )
+
+    [Transfer-Encoding] => Array
+        (
+            [0] => chunked
+        )
+
+    [Connection] => Array
+        (
+            [0] => keep-alive
+        )
+
+    [Access-Control-Allow-Headers] => Array
+        (
+            [0] => authorization,Access-Control-Allow-Origin,Content-Type
+        )
+
+    [Access-Control-Allow-Origin] => Array
+        (
+            [0] => *
+        )
+
+    [Access-Control-Allow-Methods] => Array
+        (
+            [0] => POST
+        )
+
+)
+body:
+{"resourceReference":{"resourceURL":"https://api.sdp.orange.com/smsmessaging/v1/outbound/200/requests/00JZM1361593836148Z1015153905"}}	
+
+
+
+payement:
+Array
+(
+    [Server] => Array
+        (
+            [0] => nginx/1.8.0
+        )
+
+    [Date] => Array
+        (
+            [0] => Thu, 15 Oct 2015 16:46:34 GMT
+        )
+
+    [Content-Type] => Array
+        (
+            [0] => application/json
+        )
+
+    [Location] => Array
+        (
+            [0] => https://api.sdp.orange.com/payment/v1/200/transactions/amount/DCLIENT-1444927334
+        )
+
+    [Transfer-Encoding] => Array
+        (
+            [0] => chunked
+        )
+
+    [Connection] => Array
+        (
+            [0] => keep-alive
+        )
+
+    [Access-Control-Allow-Headers] => Array
+        (
+            [0] => authorization,Access-Control-Allow-Origin,Content-Type
+        )
+
+    [Access-Control-Allow-Origin] => Array
+        (
+            [0] => *
+        )
+
+    [Access-Control-Allow-Methods] => Array
+        (
+            [0] => POST
+        )
+
+)
+{"amountTransaction":{"endUserId":"tel:+99900000011001", "transactionOperationStatus":"Charged", "referenceCode":"DCLIENT-1444927334", "paymentAmount":{"chargingInformation":{"description":"Difuser credit topup", "currency":"XOF", "amount":5.7}}, "serverReferenceCode":"DCLIENT-1444927334", "resourceURL":"https://api.sdp.orange.com/payment/v1/200/transactions/amount/DCLIENT-1444927334"}}
+
+
+
+git add .
+git commit -m ""
+git push origin master 
+
+
+
+<select id="recipientsselection" name="to" class="form-control" multiple="multiple" ng-model="messenger.editedMessage.to" ng-selected="messenger.editedMessage.to">
+    <optgroup label="Groups">
+        @foreach($groups as  $group)
+        <option value="group.{{$group->id}}"  >{{$group->name}}</option>
+        @endforeach
+    </optgroup>
+    <optgroup label="Contacts">
+        @foreach($contacts as  $contact)
+        <option value="contact.{{$contact->id}}" >{{$contact->name}}</option>
+        @endforeach
+    </optgroup>
+</select>
